@@ -1,15 +1,32 @@
+body {
+   background: rgb(174, 205, 238);
+   background: radial-gradient(
+      circle,
+      rgba(174, 205, 238, 1) 0%,
+      rgba(75, 212, 123, 1) 100%
+   );
+}
 .container {
-   display: flex;
-   align-content: center;
-   justify-content: center;
-   margin-top: 400px;
+   margin-top: 100px;
+   position: fixed;
 }
 
 .button {
-   width: 400px;
-   height: 75px;
+   width: 700px;
+   height: 100px;
    cursor: pointer;
    background-color: cyan;
    box-shadow: 10px 10px 5px grey;
-   border-radius: 10px;
+   border-radius: 15px;
 }
+
+.tooltip-container {
+   margin-left: 350px;
+}
+/* .content {
+   width: 800px;
+   height: 250px;
+   text-align: center;
+   font-size: 30px;
+   margin-left: -50px;
+} */

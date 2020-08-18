@@ -3,23 +3,23 @@ import React from "react";
 import Quote from "inspirational-quotes";
 
 class Tooltip extends React.Component {
-   state = { backgroundColor: "cyan", quotes: "", quoteDiv: "" };
+   state = { backgroundColor: "cyan", quotes: "" };
 
+   // When pointer is hover on button
    onMouseEnter = () => {
       const quote = Quote.getRandomQuote();
-      this.setState({ backgroundColor: "red", quotes: quote });
+      this.setState({ backgroundColor: "#0693E3", quotes: quote });
    };
 
+   // When pointer is left the button
    onMouseLeave = () => {
-      this.setState({ backgroundColor: "cyan" });
+      this.setState({ backgroundColor: "cyan", quotes: "" });
    };
-
-   quoteDiv = () => {};
 
    render() {
       return (
-         <div className="container">
-            <div className="content">
+         <div className="tooltip-container">
+            <div style={this.props.position}>
                <p>{this.state.quotes}</p>
             </div>
             <div>
@@ -29,7 +29,7 @@ class Tooltip extends React.Component {
                   onMouseLeave={() => this.onMouseLeave()}
                   style={{ backgroundColor: `${this.state.backgroundColor}` }}
                >
-                  Button
+                  <h1>Inspirational Quotes</h1>
                </button>
             </div>
          </div>
