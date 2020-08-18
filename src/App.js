@@ -5,7 +5,7 @@ class App extends React.Component {
    render() {
       return (
          <div>
-            <Tooltip />
+            <Tooltip position="top" />
          </div>
       );
    }
